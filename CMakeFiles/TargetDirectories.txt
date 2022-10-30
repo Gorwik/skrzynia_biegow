@@ -1,0 +1,9 @@
+C:/Users/Wiktor/Desktop/skrzynia_biegow/CMakeFiles/console.dir
+C:/Users/Wiktor/Desktop/skrzynia_biegow/CMakeFiles/myproject.bin.dir
+C:/Users/Wiktor/Desktop/skrzynia_biegow/CMakeFiles/myproject.elf.dir
+C:/Users/Wiktor/Desktop/skrzynia_biegow/CMakeFiles/myproject.hex.dir
+C:/Users/Wiktor/Desktop/skrzynia_biegow/CMakeFiles/flash.dir
+C:/Users/Wiktor/Desktop/skrzynia_biegow/CMakeFiles/flash_myproject.dir
+C:/Users/Wiktor/Desktop/skrzynia_biegow/CMakeFiles/printvars.dir
+C:/Users/Wiktor/Desktop/skrzynia_biegow/CMakeFiles/edit_cache.dir
+C:/Users/Wiktor/Desktop/skrzynia_biegow/CMakeFiles/rebuild_cache.dir
