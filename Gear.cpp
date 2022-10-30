@@ -1,6 +1,7 @@
 #include <hFramework.h>
 
-class Gear{
+class Gear
+{
     public:
         int actual_position;
     private:
@@ -20,7 +21,8 @@ class Gear{
         static hFramework::hMotor hMot3;
 
     public:
-        Gear(){
+        Gear()
+        {
             // actuator responsible for changing angle_rotate
             hMot2.setEncoderPolarity(Polarity::Reversed);  //changing encoder polarity (Polarity::Normal is default)
             hMot2.setMotorPolarity(Polarity::Normal);  //changing motor polarity
@@ -29,25 +31,29 @@ class Gear{
             hMot3.setMotorPolarity(Polarity::Normal);  //changing motor polarity
         }
 
-    void change(int reach_position){
+    void change(int reach_position)
+    {
         change_to_neutral();
         change_gear(reach_position);
         actual_position = reach_position;
     }
 
-    void change_to_neutral(){
+    void change_to_neutral()
+    {
         if (!is_neutral)
             hMot2.rotAbs(angle_neutral, power,true, INFINITE);
     }
 
-    void rotate(bool dir){
+    void rotate(bool dir)
+    {
         if (dir)
             hMot2.rotAbs(angle_left, power, true, INFINITE);
         else
             hMot2.rotAbs(angle_right, power, true, INFINITE);
     }
 
-    void move_linear(int reach_position){
+    void move_linear(int reach_position)
+    {
         if (reach_position == 1 || reach_position == 2)
             hMot3.rotAbs(angle_linear_1_2, power, true, INFINITE);
         else if (reach_position == 3 || reach_position == 4)
@@ -56,11 +62,18 @@ class Gear{
             hMot3.rotAbs(angle_linear_5_0, power, true, INFINITE);
     }
 
-    void change_gear(int reach_position){
+    void change_gear(int reach_position)
+    {
         move_linear(reach_position);
         if (reach_position == 1 || reach_position == 3 || reach_position == 5)
             rotate(true);
         else if (reach_position == 2 || reach_position == 4 || reach_position == 0)
             rotate(false);
+    }
+
+    void parking_position()
+    {
+        change_to_neutral();
+        move_linear(1);
     }
 };

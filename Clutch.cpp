@@ -8,7 +8,8 @@ class Clutch
     static hFramework::hMotor hMot1;
 
     public:
-        Clutch(){
+        Clutch()
+        {
             hMot1.setEncoderPolarity(Polarity::Reversed);  //changing encoder polarity (Polarity::Normal is default)
             hMot1.setMotorPolarity(Polarity::Normal);  //changing motor polarity
         }
